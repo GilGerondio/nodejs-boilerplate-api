@@ -13,7 +13,7 @@ function model(sequelize) {
         replacedByToken: { type: DataTypes.STRING },
         isExpired: {
             type: DataTypes.VIRTUAL,
-            get() { return Date.now() >= this.expires}
+            get() { return Date.now() >= this.expires; }
         },
         isActive: {
             type: DataTypes.VIRTUAL,
@@ -22,7 +22,7 @@ function model(sequelize) {
     };
 
     const options = {
-        //disable default timestamp fields (createdAt and updatedAt)
+        // disable default timestamp fields (createdAt and updatedAt)
         timestamps: false
     };
 
